@@ -11,7 +11,7 @@ class LoadActivity : AppCompatActivity() {
         super.onDestroy()
         setContentView(R.layout.activity_load)
 
-        val textView: TextView = findViewById(R.id.text_view)
+        val textView: TextView = findViewById(R.id.setContentView)
 
         val sharedPreferences = getSharedPreferences("Third", Context.MODE_PRIVATE)
         textView.text = sharedPreferences.getString("save", "")

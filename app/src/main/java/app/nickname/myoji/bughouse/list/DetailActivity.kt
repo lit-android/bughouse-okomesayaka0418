@@ -11,7 +11,7 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
-        val textView: TextView = findViewById(R.id.text_view)
+        val textView: TextView = findViewById(R.id.setContentView)
         val backButton: Button = findViewById(R.id.button)
 
         val text = intent.getStringExtra("TODO_NAME")

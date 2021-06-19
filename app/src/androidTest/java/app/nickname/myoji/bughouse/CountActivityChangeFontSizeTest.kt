@@ -20,7 +20,7 @@ class CountActivityChangeFontSizeTest {
 
     @Test
     fun `TextViewのサイズを小さくしているか`() {
-        Espresso.onView(ViewMatchers.withId(R.id.text_view))
+        Espresso.onView(ViewMatchers.withId(R.id.setContentView))
             .check(ViewAssertions.matches(Matchers.not(withFontSize(1000f))))
     }
 }
