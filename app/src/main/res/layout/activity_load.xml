@@ -8,7 +8,7 @@
     tools:context=".load.LoadActivity">
 
     <TextView
-        android:id="@+id/text_view"
+        android:id="@+id/setContentView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

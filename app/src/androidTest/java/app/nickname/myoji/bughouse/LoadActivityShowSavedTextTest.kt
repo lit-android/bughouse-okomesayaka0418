@@ -32,7 +32,7 @@ class LoadActivityShowSavedTextTest {
         rule.scenario.onActivity {
             it.startActivity(Intent(it, LoadActivity::class.java))
         }
-        onView(ViewMatchers.withId(R.id.text_view))
+        onView(ViewMatchers.withId(R.id.setContentView))
             .check(ViewAssertions.matches(withText(expectText)))
     }
 }

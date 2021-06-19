@@ -10,10 +10,13 @@ import androidx.recyclerview.widget.RecyclerView
 import app.nickname.myoji.bughouse.R
 
 class ListActivity : AppCompatActivity() {
-    private val taskList: List<Task> = listOf(
+    private val taskList: List<Task> = mutableListOf(
         Task("Task 1"),
         Task("Task 2"),
         Task("Task 3")
+
+
+
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,16 +31,22 @@ class ListActivity : AppCompatActivity() {
             override fun onItemClick(position: Int) {
                 val intent = Intent(this@ListActivity, DetailActivity::class.java)
                 intent.putExtra("TASK_NAME", taskList[position].name)
+
+
             }
         })
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         adapter.addAll(taskList)
 
-        addButton.setOnClickListener {
-            val name = editText.text.toString()
-            taskList.add(Task(name))
-            adapter.addAll(taskList)
+
+
+            addButton.setOnClickListener {
+                val name = editText.text.toString()
+                taskList.add(Task(name))
+                adapter.addAll(taskList)
+
+
         }
     }
 }

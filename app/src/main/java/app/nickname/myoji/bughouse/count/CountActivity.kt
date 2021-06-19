@@ -7,18 +7,18 @@ import androidx.appcompat.app.AppCompatActivity
 import app.nickname.myoji.bughouse.R
 
 class CountActivity : AppCompatActivity() {
-    val number: Int = 0
+    var number: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_count)
 
-        val button: Button = findViewById(R.id.botton)
-        val textView: TextView = findViewById(R.id.text_view)
+        val button: Button = findViewById(R.id.button)
+        var textView: TextView = findViewById(R.id.setContentView)
 
         button.setOnClickListener {
-            number　= number + 　1
-            textView.text = number
+            number = number + 1
+            textView.text = number.toString()
         }
     }
 }
